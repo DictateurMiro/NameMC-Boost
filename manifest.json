@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "NameMC Plus",
+  "version": "0.0.1",
+  "description": "Steroid for NameMc.com",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+	},
+  "content_scripts": [
+    {
+      "matches": ["*://*.namemc.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
