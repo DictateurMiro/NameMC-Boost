@@ -2,7 +2,7 @@
 
 <p align='center'>
   <b>Star ⭐ si vous voulez plus</b><br>
-<i>(English README.md <a href="#">here</a>)</i>
+<i>(English README.md <a href="https://github.com/DictateurMiro/NameMC-Boost/blob/Chrome/English-README.md">here</a>)</i>
 </p>
 
 <p align="center">
