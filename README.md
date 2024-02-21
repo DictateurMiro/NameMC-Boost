@@ -39,7 +39,7 @@
 <img src="https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/demo/skinart_viewer.gif">
 
 ### 🖼️ Cape : MinecraftCapes
-<img src="#">
+<img src="https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/demo/minecraftcapes.png">
 
 ---
 
