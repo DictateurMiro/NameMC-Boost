@@ -76,8 +76,9 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 
 ```diff
 
-v1.1 ⋮ 16/10/2023
-+ Ajout d'une video pour expliquer le fonctionnement 
+v0.1 ⋮ 20/02/2024
++ Création original
++ Fonction HideBorder / ShowBorder 
 ```
 
 <p align="center">
