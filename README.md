@@ -24,8 +24,8 @@
 
 ## 🙏 Remerciement
 
-> Special thanks for the idea <a href="https://github.com/NameMC-Extras/NameMC-Extras">NameMC Extras</a>
-> This is not a fork because i'll do anything myself and i don't take any code of NameMC Extras
+> Merci beaucoup pour l'idée de <a href="https://github.com/NameMC-Extras/NameMC-Extras">NameMC Extras</a>
+> Ce projet n'est pas un fork car je compte refaire tout le code moi meme sans prendre rien de NameMC Extras
 
 ---
 
@@ -71,7 +71,7 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 
 ---
 
-## 💭 ChangeLog
+## 💭 Mise à jour
 
 ```diff
 
