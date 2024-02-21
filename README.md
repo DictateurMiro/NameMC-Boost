@@ -78,10 +78,12 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 
 ```diff
 
+v0.2 ⋮ 21/02/2024
++ Minecraft Capes sur le profile
+
 v0.1 ⋮ 20/02/2024
 + Création original
 + Fonction HideBorder / ShowBorder 
-+ Ajout Cape "MinecraftCapes" sur le profile
 ```
 
 <p align="center">
