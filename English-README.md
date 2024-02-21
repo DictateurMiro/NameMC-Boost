@@ -22,16 +22,16 @@
 
 ---
 
-## 🙏 Remerciement
+## 🙏 Thank you
 
 > Special thanks for the idea <a href="https://github.com/NameMC-Extras/NameMC-Extras">NameMC Extras</a>
 > This is not a fork because i'll do anything myself and i don't take any code of NameMC Extras
 
 ---
 
-## 🌙 Caractéristiques
+## 🌙 Features
 ```sh-session
-✔ "Hide Border" pour cacher les espacements dans l'historique des sreens (vidéo ci-dessous)
+✔ "Hide Border" to hide spacing in the sreens history (video below)
 ```
 ---
 
@@ -40,33 +40,33 @@
 
 ---
 
-## 🚀 Installation & Configuration
+## 🚀 Installation and configuration
 
 ```sh-session
-> Téléchargé le fichier (git clone https://github.com/DictateurMiro/NameMC-Boost.git)
-> Rendrez vous sur Chrome puis sur le lien "chrome://extensions/"
-> Activé le mode développeur
-> Cliquez sur "Charger l'extension non empaquetée"
-> Ajoutez le dossier décompresser
+> Download the file (git clone https://github.com/DictateurMiro/NameMC-Boost.git)
+> Go to Chrome and click on the link "chrome://extensions/"
+> Activate developer mode
+> Click on "Load unpacked extension".
+> Add the unzip folder
 ```
 
 ---
 
-## 🎉 A venir
+## 🎉 Up comming
 
 ```sh-session
-- Rajoutez le navigateur Firefox
+- Add Firefox browser
 ```
 
 ---
 
 ## 📋 License
 
-Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
+This project is licensed under the GNU GENERAL PUBLIC LICENSE
 ```js
-  ・A des fins éducatives uniquement et toutes les conséquences causées par vos actions sont de votre responsabilité.
-  ・La vente de cet outil gratuit est interdite
-  ・Si vous faites une copie de ce document ou si vous le mettez en ligne, il doit s'agir d'un logiciel libre et les crédits doivent renvoyer à ce repo
+  ・For educational purposes only and any consequences caused by your actions are your responsibility.
+  ・The sale of this free tool is forbidden
+  ・If you make a copy of this document or put it online, it must be free software and the credits must refer to this repo
 ```
 
 ---
@@ -76,10 +76,10 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 ```diff
 
 v0.1 ⋮ 20/02/2024
-+ Création original
-+ Fonction HideBorder / ShowBorder 
++ Original creation
++ Function HideBorder / ShowBorder 
 ```
 
 <p align="center">
-  README inspiré de xKiian
+  README inspired by xKiian
 </p>
