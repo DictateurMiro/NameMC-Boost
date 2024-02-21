@@ -38,6 +38,9 @@
 ### 🎥 Hide Border
 <img src="https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/demo/skinart_viewer.gif">
 
+### 🖼️ Cape : MinecraftCapes
+<img src="#">
+
 ---
 
 ## 🚀 Installation & Configuration
@@ -78,6 +81,7 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 v0.1 ⋮ 20/02/2024
 + Création original
 + Fonction HideBorder / ShowBorder 
++ Ajout Cape "MinecraftCapes" sur le profile
 ```
 
 <p align="center">
