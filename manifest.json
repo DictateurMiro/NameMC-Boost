@@ -1,19 +1,21 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "NameMC Plus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Steroid for NameMc.com",
   "permissions": [
     "activeTab"
   ],
-  "background": {
-    "scripts": ["bg.js"],
-    "persistent": false
-	},
   "content_scripts": [
     {
       "matches": ["*://*.namemc.com/*"],
-      "js": ["content.js"]
+      "js": [
+		"hide&show-border/print.js",
+		"hide&show-border/hideborder.js",
+		"hide&show-border/showborder.js",
+		"hide&show-border/toggleborder.js",
+		"capes/minecraftcapes.js"
+	  ]
     }
   ]
 }
