@@ -1,0 +1,23 @@
+brick block | Classic Account | User bought the game during the CLASSIC development phase of Minecraft (2009-05-16 - 2009-12-22)
+leather chestplate | Indev Account | User bought the game during the INDEV development phase of Minecraft (2009-12-23 - 2010-02-26)
+chainmail chestplate | Infdev Account | User bought the game during the INFDEV development phase of Minecraft (2010-02-27 - 2010-06-29)
+golden chestplate | Alpha Account | User bought the game during the ALPHA development phase of Minecraft (2010-06-30 - 2010-12-19)
+iron chestplate | Beta Account | User bought the game during the BETA development phase of Minecraft (2010-12-20 - 2011-11-17)
+bow | Name Sniper | The user changed the name in the first minute when the name change feature was introduced. This officially makes the user one of the first users to change their name. (2015-02-04 10:11:00 GMT)
+command block | Mojang Staff | User is a Mojang employee
+brush | Short name | The Minecraft name of the user has only one or two characters
+nether star | Gift by Mojang | Received a unique cosmetic or cape by Mojang
+map | Cape Collector | The account owns 4 different capes or more
+diamond | All Minecon capes | The account owns all existing Minecon capes
+
+
+ 
+barrier bock | Previously invalid name | The user has an invalid name in their past name history
+barrier block | Invalid UUID | The user has an invalid UUID. It does not comply with the UUIDv4 standard.
+barrier block | Invalid name | Minecraft name contains an invalid character or is too long
+
+ 
+ | Oldest known account | Oldest known Minecraft account on this page
+ | Most name changes | The user has the most name changes with their Minecraft account
+ | First name change | First known name change of a Minecraft account
+ | Duplicate Name | The name of the user exists twice in the Minecraft database
