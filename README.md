@@ -79,6 +79,9 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 
 ```diff
 
+v0.3 ⋮ 22/02/2024
++ Badges LabyMod directly in NameMC Profile interface
+
 v0.2 ⋮ 21/02/2024
 + Minecraft Capes sur le profile
 
