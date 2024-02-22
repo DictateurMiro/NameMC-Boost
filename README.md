@@ -32,6 +32,7 @@
 ## 🌙 Caractéristiques
 ```sh-session
 ✔ "Hide Border" pour cacher les espacements dans l'historique des sreens (vidéo ci-dessous)
+✔ "MinecraftCapes" sur le profile pour voir les capes du service MinecraftCapes
 ```
 ---
 
