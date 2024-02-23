@@ -1,3 +1,6 @@
+// Function checkNames (22/02/2024)
+// By DictateurMiro
+
 function checkButton() {
     var xpath = '/html/body/main/div[2]/div[1]/div[3]/div[2]';
     var xpathResult = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
