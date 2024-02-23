@@ -35,6 +35,7 @@
 ✔ "MinecraftCapes" sur le profile pour voir les capes du service MinecraftCapes
 ✔ "show history name" permet de voir l'historique des noms qui sont caché sur namemc en passant par l'api de laby.net
 ✔ "Badges" affiché sur le profil d'un joueur, les badges sont trouvé grâce a l'api de laby.net
+✔ "Creation Date" qui est affiché sur le profil d'un joueur si elle est trouvé
 ```
 ---
 
