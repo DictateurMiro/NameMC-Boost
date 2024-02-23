@@ -1,4 +1,4 @@
-// Function formatDate to pickup date (YYYY-MM-DD) to convert to (DD month-in-letter YYYY) (22/02/2024)
+// Function formatDate to pickup date (YYYY-MM-DD) to convert to (DD month-in-letter YYYY) (23/02/2024)
 // By DictateurMiro
 
 function formatDate(dateString) {
