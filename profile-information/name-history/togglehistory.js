@@ -1,3 +1,6 @@
+// Function toggleHistory to switch between "show name history" and "hide name history" (22/02/2024)
+// By DictateurMiro
+
 function toggleHistory() {
   var link = document.querySelector('#togglehistory');
 
