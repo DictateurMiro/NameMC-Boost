@@ -16,7 +16,7 @@ function datePrint(date) {
 
     newRow.className = 'row g-0';
     newRow.innerHTML = `
-            <div class="col col-lg-3"><strong>Creation Date : </strong></div>
+            <div class="col col-lg-3"><strong>Creation Date</strong></div>
             <div class="col-auto" id="show_here_badges_list">${content}</div>`;
 
     thirdRow.parentNode.insertBefore(newRow, thirdRow.nextSibling);
