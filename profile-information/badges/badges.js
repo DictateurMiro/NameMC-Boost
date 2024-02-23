@@ -1,3 +1,6 @@
+// Function badges (22/02/2024)
+// By DictateurMiro
+
 function badgesPrint() {
   var rows = document.querySelectorAll('.row.g-0');
   if (rows.length >= 4) {
