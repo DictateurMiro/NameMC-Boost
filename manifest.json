@@ -19,6 +19,8 @@
         "hide&show-border/toggleborder.js",
         "capes/minecraftcapes.js",
         "profile-information/badges/badges.js",
+	"profile-information/badges/fetchBadges.js",
+	"profile-information/badges/badgesPrint.js",
 	"profile-information/name-history/checkbutton.js",
 	"profile-information/name-history/fetchnames.js",
 	"profile-information/name-history/hidehistory.js",
