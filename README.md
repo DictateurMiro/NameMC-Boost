@@ -82,8 +82,14 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 
 ```diff
 
+v0.5 ⋮ 23/02/2024
++ La date de création de certains comptes Minecraft 
+
+v0.4 ⋮ 22/02/2024
++ Pouvoir voir l'historique des pseudo qui sont caché
+
 v0.3 ⋮ 22/02/2024
-+ Badges LabyMod directly in NameMC Profile interface
++ Les Badges LabyMod directement sur le profile
 
 v0.2 ⋮ 21/02/2024
 + Minecraft Capes sur le profile
