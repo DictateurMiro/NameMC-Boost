@@ -1,21 +1,31 @@
 {
   "manifest_version": 3,
-  "name": "NameMC Boost",
-  "version": "0.0.2",
+  "name": "NameMC Plus",
+  "version": "0.0.4",
   "description": "Steroid for NameMc.com",
   "permissions": [
     "activeTab"
+  ],
+  "host_permissions": [
+    "https://laby.net/*"
   ],
   "content_scripts": [
     {
       "matches": ["*://*.namemc.com/*"],
       "js": [
-		"hide&show-border/print.js",
-		"hide&show-border/hideborder.js",
-		"hide&show-border/showborder.js",
-		"hide&show-border/toggleborder.js",
-		"capes/minecraftcapes.js"
-	  ]
+        "hide&show-border/print.js",
+        "hide&show-border/hideborder.js",
+        "hide&show-border/showborder.js",
+        "hide&show-border/toggleborder.js",
+        "capes/minecraftcapes.js",
+        "profile-information/badges/badges.js",
+	"profile-information/name-history/checkbutton.js",
+	"profile-information/name-history/fetchnames.js",
+	"profile-information/name-history/hidehistory.js",
+	"profile-information/name-history/print.js",
+	"profile-information/name-history/showhistory.js",
+	"profile-information/name-history/togglehistory.js"
+      ]
     }
   ]
 }
