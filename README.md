@@ -61,8 +61,7 @@
 
 ## Détails techniques / Explication 
 
-##### hideBorder
-> <a href="a">explication hideBorder</a>
+> <a href="https://github.com/DictateurMiro/NameMC-Boost/blob/Chrome/explication/hideBorder.md">explication hideBorder</a>
 
 ###### xxxxxx
 
