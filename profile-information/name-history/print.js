@@ -1,3 +1,6 @@
+// Function Print "show name history / hide name history" to the profile (22/02/2024)
+// By DictateurMiro
+
 if (checkButton()) {
     fetchNames();
     var cardHeaders = document.querySelectorAll('.card-header.py-1');
