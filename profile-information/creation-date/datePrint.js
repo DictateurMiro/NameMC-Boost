@@ -1,3 +1,6 @@
+// Function datePrint to show text "Creation Date" in the profil (23/02/2024)
+// By DictateurMiro
+
 function datePrint(date) {
   var content;
   if (date) {
