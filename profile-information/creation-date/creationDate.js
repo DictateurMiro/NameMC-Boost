@@ -1,3 +1,6 @@
+// Function creationDate to find the creation date of account with uuid (22/02/2024)
+// By DictateurMiro
+
 function creationDate() {
   // expression xpath for the uuid (two because one with the user already register on namemc and the other not register in namemc)
   let xpathExpressions = [
@@ -14,7 +17,7 @@ function creationDate() {
       element = xpathResult.singleNodeValue;
       if (element) break;
     } catch (error) {
-      console.error("error :", xpathExpressions[i]);
+      console.error("Debug (NameMC-Boost) >>> Error (creationDate) :", xpathExpressions[i]);
     }
   }
 
