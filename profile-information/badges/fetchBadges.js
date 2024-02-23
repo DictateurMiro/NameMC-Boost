@@ -1,4 +1,5 @@
-
+// Function fetch to pickup the badges from laby.net (22/02/2024)
+// By DictateurMiro
 
 function fetchBadges() {
   var xpathResult = document.evaluate('/html/body/main/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/samp', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
