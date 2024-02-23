@@ -1,3 +1,6 @@
+// Function show MinecraftCapes (21/02/2024)
+// By DictateurMiro
+
 var pageTitle = document.title;
 var username = pageTitle.split('|')[0].trim();
 
@@ -11,7 +14,7 @@ else {
 	fetch('https://api.capes.dev/load/' + username)
 	  .then(response => response.json())
 	  .then(data => {
-		// Vérifier si la cape est trouvée
+		// verif if cape exist
 		if (data.minecraftcapes && data.minecraftcapes.frontImageUrl) {
 			var cards = document.querySelectorAll('.card.mb-3');
 			var lastCard = cards[cards.length - 2];
@@ -28,11 +31,12 @@ else {
 
 			lastCard.parentNode.insertBefore(newCard, lastCard.nextSibling);
 		} else {
-			// La cape n'est pas trouvée: Il faut rien afficher
+			// debug capes doesn't exist
 			console.log("Debug (NameMC-Boost) >>> no find for MinecraftCapes to", username);
 		}
 	  })
 	  .catch(error => {
+		// debug api dead or no connecion internet, api not reachable
 		console.error('Debug (NameMC-Boost) >>> Error to find cape from MinecraftCapes, api dead ? ', error);
 	  });
 }
