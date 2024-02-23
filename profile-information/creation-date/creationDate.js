@@ -1,4 +1,4 @@
-// Function creationDate to find the creation date of account with uuid (22/02/2024)
+// Function creationDate to find the creation date of account with uuid (23/02/2024)
 // By DictateurMiro
 
 function creationDate() {
