@@ -2,7 +2,7 @@
 // By DictateurMiro
 
 function checkStartCreationDate() {
-  if (document.title.includes("Profil")) {
+  if (window.location.href.includes("profile")) {
     creationDate();
   } else {
     console.log("La fonction 'creationDate()' n'est pas exécutée car le titre de la page ne contient pas 'Profil'.");
