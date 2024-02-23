@@ -59,6 +59,15 @@
 
 ---
 
+## Détails techniques / Explication 
+
+##### hideBorder
+> <a href="a">explication hideBorder</a>
+
+###### xxxxxx
+
+---
+
 ## 🎉 A venir
 
 ```sh-session
