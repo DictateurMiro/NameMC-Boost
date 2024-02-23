@@ -33,6 +33,8 @@
 ```sh-session
 ✔ "Hide Border" pour cacher les espacements dans l'historique des sreens (vidéo ci-dessous)
 ✔ "MinecraftCapes" sur le profile pour voir les capes du service MinecraftCapes
+✔ "show history name" permet de voir l'historique des noms qui sont caché sur namemc en passant par l'api de laby.net
+✔ "Badges" affiché sur le profil d'un joueur, les badges sont trouvé grâce a l'api de laby.net
 ```
 ---
 
