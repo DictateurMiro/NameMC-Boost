@@ -61,9 +61,15 @@
 
 ## Détails techniques / Explication 
 
-> <a href="https://github.com/DictateurMiro/NameMC-Boost/blob/Chrome/explication/hideBorder.md">explication hideBorder</a>
+> <a href="https://github.com/DictateurMiro/NameMC-Boost/blob/Chrome/explication/fr-hideBorder.md">explication hideBorder</a>
 
-###### xxxxxx
+> <a href="#">explication cape : MinecraftCapes</a>
+
+> <a href="#">explication showNameHistory</a>
+
+> <a href="#">explication badges</a>
+
+> <a href="#">explication creationDate</a>
 
 ---
 
