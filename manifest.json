@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NameMC Plus",
-  "version": "0.0.4",
+  "version": "0.5.0",
   "description": "Steroid for NameMc.com",
   "permissions": [
     "activeTab"
@@ -26,7 +26,11 @@
 	"profile-information/name-history/hidehistory.js",
 	"profile-information/name-history/print.js",
 	"profile-information/name-history/showhistory.js",
-	"profile-information/name-history/togglehistory.js"
+	"profile-information/name-history/togglehistory.js",
+	"profile-information/creation-date/check.js",
+	"profile-information/creation-date/creationDate.js",
+	"profile-information/creation-date/datePrint.js",
+	"profile-information/creation-date/formatDate.js"
       ]
     }
   ]
