@@ -1,3 +1,6 @@
+// Function showHistory (to replace hide name to the real name) (22/02/2024)
+// By DictateurMiro
+
 function showHistory() {
     fetchNames().then(names => {
         names.forEach((name, index) => {
