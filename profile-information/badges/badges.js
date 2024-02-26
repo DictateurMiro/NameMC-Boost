@@ -1,15 +1,29 @@
-// Function badges (22/02/2024)
+// Function badges to fetch and print badges to profile of user (26/02/2024)
 // By DictateurMiro
 
+// function sleep(ms) -> to make a pause to fix the problem of creation date and badges intertwines
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function final() {
+	await sleep(1000); // wait 1 second before launch all function
+    if (document.title.includes("Profil")) {
+        badgesPrint(); // start function badgesPrint()
+        for (let i = 0; i < 3; i++) {
+            await sleep(i * 1000);
+        }
+        await fetchBadges(); // wait the function fetchBadges to finish
+    } else {
+        console.log("Debug (NameMC-Boost) >>> Badges can't show here, we are not in Profile zone");
+    }
+}
+
 if (document.title.includes("Profil")) {
-  badgesPrint();
-  fetchBadges();
+  // the function is already call in final() function
 } else {
   console.log("Debug (NameMC-Boost) >>> Badges can't show here, we are not in Profile zone");
 }
-
-// Function badgesPrint to show the badges in the profil (22/02/2024)
-// By DictateurMiro
 
 function badgesPrint() {
   var rows = document.querySelectorAll('.row.g-0');
@@ -21,7 +35,7 @@ function badgesPrint() {
 
     newRow.innerHTML = `
             <div class="col col-lg-3"><strong>Badges</strong></div>
-            <div class="col-auto" id="show_here_badges_list">Loading ...</div>`;
+            <div class="col-auto" id="badges_list">Loading...</div>`;
 
     thirdRow.parentNode.insertBefore(newRow, thirdRow.nextSibling);
   } else {
@@ -29,45 +43,65 @@ function badgesPrint() {
   }
 }
 
-// Function fetch to pickup the badges from laby.net (22/02/2024)
-// By DictateurMiro
+async function fetchBadges() {
+    let xpathExpressions = [
+    '/html/body/main/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/samp', // xpath 1
+    '/html/body/main/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/samp' // xpath 2
+	  ];
 
-function fetchBadges() {
-  var xpathResult = document.evaluate('/html/body/main/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/samp', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-  var element = xpathResult.singleNodeValue;
-  var uuid = element.innerText;
 
-  let apiUrl = "https://laby.net/api/v3/user/" + uuid + "/badges";
-  let proxyUrl = "https://puzzle-verbena-flea.glitch.me/";
+	  let element = null;
 
-  fetch(proxyUrl + apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      var badgesContainer = document.getElementById('show_here_badges_list');
-      badgesContainer.innerHTML = ''; // clear message "Loading ..."
+	  for (let i = 0; i < xpathExpressions.length; i++) {
+		try {
+		  var xpathResult = document.evaluate(xpathExpressions[i], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+		  element = xpathResult.singleNodeValue;
+		  if (element) break;
+		} catch (error) {
+		  console.error("Debug (NameMC-Boost) >>> Error (creationDate) :", xpathExpressions[i]);
+		}
+	  }
 
-      if (data && data.length > 0) {
-        data.forEach(badge => {
-          // create element 'span' for all badges
-          var badgeElement = document.createElement('span');
-          badgeElement.textContent = badge.name;
-          badgeElement.title = badge.description; // add description to the badges
-          badgeElement.style.cursor = 'help'; // change cursor
+	  if (!element) {
+		console.error("Debug (NameMC-Boost) >>> Nothing find with the xpath");
+		return;
+	  }
+	
+    var uuid = element.innerText;
 
-          // add a space if it's not the last badges 
-          if (badge !== data[data.length - 1]) {
-            badgeElement.textContent += ', ';
-          }
+    let apiUrl = "https://laby.net/api/v3/user/" + uuid + "/badges";
+    let proxyUrl = "https://puzzle-verbena-flea.glitch.me/";
 
-          // Ajouter l'élément du badge au conteneur
-          badgesContainer.appendChild(badgeElement);
-        });
-      } else {
-        // user don't have badges
-        badgesContainer.textContent = '❌';
-      }
-    })
-    .catch(error => {
-      console.error('Debug (NameMC-Boost) >>> Badges not found error : ', error);
-    });
+    try {
+        let response = await fetch(proxyUrl + apiUrl);
+        let data = await response.json();
+
+        var badgesContainer = document.getElementById('badges_list');
+        if (badgesContainer) {
+            badgesContainer.innerHTML = ''; // clear the message "Loading..."
+
+            if (data && data.length > 0) {
+                data.forEach(badge => {
+                    var badgeElement = document.createElement('span');
+                    badgeElement.textContent = badge.name;
+                    badgeElement.title = badge.description;
+                    badgeElement.style.cursor = 'help';
+
+                    if (badge !== data[data.length - 1]) {
+                        badgeElement.textContent += ', ';
+                    }
+
+                    badgesContainer.appendChild(badgeElement);
+                });
+            } else {
+                badgesContainer.textContent = '❌';
+            }
+        } else {
+            console.error('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
+        }
+    } catch (error) {
+        console.error('Debug (NameMC-Boost) >>> Badges not found error : ', error);
+    }
 }
+
+final();
