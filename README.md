@@ -77,6 +77,7 @@
 
 ```sh-session
 - Rajoutez le navigateur Firefox
+- Regler le probleme dans hideBorder ne pas toucher a la catégories des capes
 ```
 
 ---
