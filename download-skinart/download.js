@@ -1,4 +1,4 @@
-// Print element in the page of profile NameMC (01/03/2024)
+// Function to download history of skin to make an skin art png image (01/03/2024)
 // By DictateurMiro
 
 function combineCanvasImages() {
