@@ -30,7 +30,9 @@
         "profile-information/name-history/print.js",
         "profile-information/name-history/showhistory.js",
         "profile-information/name-history/togglehistory.js",
-        "profile-information/creation-date/creationDate.js"
+        "profile-information/creation-date/creationDate.js",
+        "download-skinart/print.js",
+        "download-skinart/download.js"
       ]
     }
   ]
