@@ -36,6 +36,7 @@
 ✔ "show history name" permet de voir l'historique des noms qui sont caché sur namemc en passant par l'api de laby.net
 ✔ "Badges" affiché sur le profil d'un joueur, les badges sont trouvé grâce a l'api de laby.net
 ✔ "Creation Date" qui est affiché sur le profil d'un joueur si elle est trouvé
+✔ "Download SkinArt" button pour permettre de téléchargé les 27 derniers tete de skin affiché sur le profil
 ```
 ---
 
@@ -71,6 +72,8 @@
 
 > <a href="#">explication creationDate</a>
 
+> <a href="#">explication downloadSkinart</a>
+
 ---
 
 ## 🎉 A venir
@@ -96,6 +99,9 @@ Ce projet est placé sous la licence GNU GENERAL PUBLIC LICENSE
 ## 💭 Mise à jour
 
 ```diff
+
+v0.6 ⋮ 01/03/2024
++ Téléchargé les skinArt sur le profile NameMC
 
 v0.5 ⋮ 23/02/2024
 + La date de création de certains comptes Minecraft 
