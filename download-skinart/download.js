@@ -30,7 +30,7 @@ function combineCanvasImages() {
 
     var downloadLink = document.createElement('a');
     downloadLink.href = combinedCanvas.toDataURL();
-    downloadLink.download = 'combined_image.png';
+    downloadLink.download = 'skin_art.png';
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
