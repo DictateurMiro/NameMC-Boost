@@ -32,7 +32,8 @@
         "profile-information/name-history/togglehistory.js",
         "profile-information/creation-date/creationDate.js",
         "download-skinart/print.js",
-        "download-skinart/download.js"
+        "download-skinart/download.js",
+        "adBlock/ad_block.js"
       ]
     }
   ]
