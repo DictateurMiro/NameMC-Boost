@@ -6,11 +6,11 @@
     "1": "CapVert",
     "2": "Koweit",
     "3": "slkp", 
-    "4": "Owenbrr1",
+    "4": "Owenbrr1"
   },
   "bughunter": {
     "description": "A special badges given to player who find any type of bug in the extension.",
     "name": "Bug Hunter",
-    "icon_url": null,
+    "icon_url": null
   }
 }
