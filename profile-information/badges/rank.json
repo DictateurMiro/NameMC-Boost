@@ -7,5 +7,11 @@
     "2": "Koweit",
     "3": "slkp", 
     "4": "Owenbrr1"
+  },
+  "bughunter": {
+    "description": "test description",
+    "name": "Bug Hunter",
+    "icon_url": null,
+    "1": "Loulou21cm"
   }
 }
