@@ -2,9 +2,9 @@
   "supporter": {
     "description": "A special badges given to all players who put a star on the github project (discord link to claim the badges)",
     "name": "Supporter",
-    "icon_url" : null,
+    "icon_url": null,
     "1": "CapVert",
     "2": "Koweit",
-    "3": "slkp",
+    "3": "slkp"
   }
 }
