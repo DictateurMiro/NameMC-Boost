@@ -1,18 +1,16 @@
 {
   "supporter": {
-    "description": "A special badges given to all players who put a star on the github project (discord link to claim the badges)",
+    "description": "A special badges given to all players who put a star on the github project (discord link to claim the badges).",
     "name": "Supporter",
     "icon_url": null,
     "1": "CapVert",
     "2": "Koweit",
     "3": "slkp", 
     "4": "Owenbrr1",
-    "5": "Loulou21cm"
   },
   "bughunter": {
-    "description": "test description",
+    "description": "A special badges given to player who find any type of bug in the extension.",
     "name": "Bug Hunter",
     "icon_url": null,
-    "1": "Loulou21cm"
   }
 }
