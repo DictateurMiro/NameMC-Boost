@@ -12,5 +12,11 @@
     "description": "A special badges given to player who find any type of bug in the extension.",
     "name": "Bug Hunter",
     "icon_url": null
+  },
+  "fix_allmineconcape": {
+    "description": "The account owns all existing Minecon capes",
+    "name": "All Minecon capes",
+    "icon_url": null,
+    "1": "Marc"
   }
 }
