@@ -18,5 +18,12 @@
     "name": "All Minecon capes",
     "icon_url": null,
     "1": "Marc"
+  },
+  "fix_capecollector": {
+    "description": "The account owns 4 different capes or more",
+    "name": "Cape Collector",
+    "icon_url": null,
+    "1": "shoghicp",
+    "2": "Wrex"
   }
 }
