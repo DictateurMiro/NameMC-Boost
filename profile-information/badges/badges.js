@@ -77,17 +77,16 @@ async function fetchLabyBadges() {
             element = xpathResult.singleNodeValue;
             if (element) break;
         } catch (error) {
-            console.error("Debug (NameMC-Boost) >>> Error (creationDate) :", xpathExpressions[i]);
+            console.error("Debug (NameMC-Boost) >>> Error :", xpathExpressions[i], ":", error);
         }
     }
 
     if (!element) {
-        console.error("Debug (NameMC-Boost) >>> Nothing find with the xpath");
+        console.error("Debug (NameMC-Boost) >>> Nothing found with the xpath");
         return;
     }
 
     var uuid = element.innerText;
-
     let apiUrl = "https://laby.net/api/v3/user/" + uuid + "/badges";
     let proxyUrl = "https://puzzle-verbena-flea.glitch.me/";
 
@@ -100,36 +99,32 @@ async function fetchLabyBadges() {
             badgesContainer.innerHTML = '';
 
             if (data && data.length > 0) {
-                badgesFromLabyFound = true;
-                data.forEach(badge => {
-                    var badgeElement = document.createElement('span');
-                    badgeElement.textContent = badge.name;
-                    badgeElement.title = badge.description;
-                    badgeElement.style.cursor = 'help';
-
-                    if (badge !== data[data.length - 1]) {
-                        badgeElement.textContent += ', ';
-                    }
-
-                    badgesContainer.appendChild(badgeElement);
-                });
-            }
+		badgesFromLabyFound = true;
+		data.forEach(badge => {
+			const badgeElement = createBadgeElement(badge);
+			badgesContainer.appendChild(badgeElement);
+			if (badge !== data[data.length - 1]) {
+				badgesContainer.appendChild(document.createTextNode(', '));
+			}
+		});
+		}
         } else {
             console.error('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
         }
     } catch (error) {
-        console.error('Debug (NameMC-Boost) >>> Badges not found error : ', error);
+        console.error('Debug (NameMC-Boost) >>> Badges not found error :', error);
     }
-	
-	if (badgesFromLabyFound && badgesContainer.childNodes.length > 0) {
-        badgesContainer.appendChild(document.createTextNode(', ')); // Ajouter une virgule et un espace
+
+    if (badgesFromLabyFound && badgesContainer.childNodes.length > 0) {
+        badgesContainer.appendChild(document.createTextNode(', ')); // Add a comma and a space
     }
 }
+
+
 
 // function fetchJsonBadges() -> to fetch badges from JSON
 async function fetchJsonBadges() {
     let badgeNamesData = await fetchBadgeNames();
-
     var badgesContainer = document.getElementById('badges_list');
     if (!badgesContainer) {
         console.error('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
@@ -149,7 +144,11 @@ async function fetchJsonBadges() {
             if (document.URL.includes(username)) {
                 badgesFromJsonFound = true;
                 var badgeElement = document.createElement('span');
-                badgeElement.textContent = badgeInfo.name;
+                if (badgeInfo.name === "OG Name") {
+                    badgeElement.innerHTML = badgeInfo.name + ' <img src="https://i.imgur.com/4z0YsnU.png" alt="OG Name" style="display: inline; margin-left: 5px;"/>';
+                } else {
+                    badgeElement.textContent = badgeInfo.name;
+                }
                 badgeElement.title = badgeInfo.description;
                 badgeElement.style.cursor = 'help';
 
@@ -164,16 +163,32 @@ async function fetchJsonBadges() {
             badgesContainer.appendChild(document.createTextNode(', '));
         }
     }
-	if (!badgesFromJsonFound && badgesFromLabyFound) {
-        badgesContainer.removeChild(badgesContainer.lastChild); // Enlever le dernier nœud (virgule et espace)
-    }
+}
 
-    for (let i = 0; i < badgesJsonArray.length; i++) {
-        badgesContainer.appendChild(badgesJsonArray[i]);
-        if (i !== badgesJsonArray.length - 1) {
-            badgesContainer.appendChild(document.createTextNode(', '));
-        }
+const badgeImages = {
+    "OG Name": "../../assets/badges-icon/og_name.png",
+    "Mojang Staff": "../../assets/badges-icon/mojang_staff.png"
+};
+
+function createBadgeElement(badge) {
+    let badgeElement;
+
+    if (badgeImages[badge.name]) {
+        badgeElement = document.createElement('img');
+        badgeElement.src = badgeImages[badge.name];
+        badgeElement.alt = badge.name;
+        badgeElement.title = badge.name + ': ' + badge.description;
+        badgeElement.style.width = '32px';
+        badgeElement.style.height = '32px';
+        badgeElement.style.display = 'inline';
+        badgeElement.style.marginRight = '5px';
+    } else {
+        badgeElement = document.createElement('span');
+        badgeElement.textContent = badge.name;
+        badgeElement.title = badge.description;
+        badgeElement.style.cursor = 'help';
     }
+    return badgeElement;
 }
 
 final();
