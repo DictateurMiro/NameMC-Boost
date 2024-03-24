@@ -13,6 +13,13 @@
         "name": "Bug Hunter",
         "icon_url": null
     },
+	"fix_classic_account": {
+		"description": "User bought the game during the CLASSIC development phase of Minecraft (2009-05-16 - 2009-12-22)",
+		"name": "Classic Account",
+		"icon_url": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/classic_account.png",
+		"1": "Owenbrr1",
+		"2": "krov"
+	},
     "fix_allmineconcape": {
         "description": "The account owns all existing Minecon capes",
         "name": "All Minecon capes",
