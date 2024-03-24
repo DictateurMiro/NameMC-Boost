@@ -37,6 +37,6 @@ else {
 	  })
 	  .catch(error => {
 		// debug api dead or no connecion internet, api not reachable
-		console.error('Debug (NameMC-Boost) >>> Error to find cape from MinecraftCapes, api dead ? ', error);
+		console.log('Debug (NameMC-Boost) >>> Error to find cape from MinecraftCapes, api dead ? ', error);
 	  });
 }
