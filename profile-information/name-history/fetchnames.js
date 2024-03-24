@@ -17,7 +17,7 @@ function fetchNames() {
         resolve(names);
     })
     .catch(error => {
-        console.error('Erreur lors de la récupération des noms:', error);
+        console.log('Erreur lors de la récupération des noms:', error);
         reject(error);
     });
   });
