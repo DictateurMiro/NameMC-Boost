@@ -17,12 +17,12 @@ function creationDate() {
       element = xpathResult.singleNodeValue;
       if (element) break;
     } catch (error) {
-      console.error("Debug (NameMC-Boost) >>> Error (creationDate) :", xpathExpressions[i]);
+      console.log("Debug (NameMC-Boost) >>> Error (creationDate) :", xpathExpressions[i]);
     }
   }
 
   if (!element) {
-    console.error("Debug (NameMC-Boost) >>> Nothing find with the xpath");
+    console.log("Debug (NameMC-Boost) >>> Nothing find with the xpath");
     return;
   }
 
@@ -36,7 +36,7 @@ function creationDate() {
       var date = formatDate(data.created_at);
       datePrint(date);
     } else {
-      console.error("Debug (NameMC-Boost) >>> Unable to find the date of creation of UUID :", uuid);
+      console.log("Debug (NameMC-Boost) >>> Unable to find the date of creation of UUID :", uuid);
       datePrint(null);
     }
   });
@@ -80,7 +80,7 @@ function datePrint(date) {
 
     thirdRow.parentNode.insertBefore(newRow, thirdRow.nextSibling);
   } else {
-    console.error("Debug (NameMC-Boost) >>> Badges print can't show up here because the number of rows is less than 3.");
+    console.log("Debug (NameMC-Boost) >>> Badges print can't show up here because the number of rows is less than 3.");
   }
 }
 
