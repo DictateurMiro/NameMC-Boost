@@ -35,7 +35,7 @@ function copyNames() {
 
     navigator.clipboard.writeText(names)
         .then(() => console.log('Debug (NameMC-Boost) >>> Names copy into clipboard'))
-        .catch(err => console.error('Debug (NameMC-Boost) >>> Error while copy : ', err));
+        .catch(err => console.log('Debug (NameMC-Boost) >>> Error while copy : ', err));
 }
 
 // Print button
