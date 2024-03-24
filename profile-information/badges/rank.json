@@ -16,7 +16,7 @@
     "fix_allmineconcape": {
         "description": "The account owns all existing Minecon capes",
         "name": "All Minecon capes",
-        "icon_url": null,
+        "icon_url": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/all_minecon_capes.png",
         "1": "Marc",
         "2": "Fox",
         "3": "Nobleman",
@@ -25,7 +25,7 @@
     "fix_capecollector": {
         "description": "The account owns 4 different capes or more",
         "name": "Cape Collector",
-        "icon_url": null,
+        "icon_url": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/cape_collector.png",
         "1": "shoghicp",
         "2": "Wrex",
         "3": "ProfMobius",
@@ -43,7 +43,7 @@
     "fix_mojangstaff": {
         "description": "User is a Mojang employee",
         "name": "Mojang Staff",
-        "icon_url": null,
+        "icon_url": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/mojang_staff.png",
         "1": "Vaktis",
         "2": "InternetKitten",
         "3": "FruktHamster",
