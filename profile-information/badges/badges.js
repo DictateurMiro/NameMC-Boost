@@ -19,7 +19,7 @@ async function fetchBadgeNames() {
         const badgeData = JSON.parse(text);
         return badgeData;
     } catch (error) {
-        console.error('Debug (NameMC-Boost) >>> Error fetching or parsing JSON: ', error);
+        console.log('Debug (NameMC-Boost) >>> Error fetching or parsing JSON: ', error);
     }
 }
 
@@ -58,7 +58,7 @@ function badgesPrint() {
 
         thirdRow.parentNode.insertBefore(newRow, thirdRow.nextSibling);
     } else {
-        console.error("Debug (NameMC-Boost) >>> Badges print can't show up here because the number of rows is less than 3.");
+        console.log("Debug (NameMC-Boost) >>> Badges print can't show up here because the number of rows is less than 3.");
     }
 }
 
@@ -77,12 +77,12 @@ async function fetchLabyBadges() {
             element = xpathResult.singleNodeValue;
             if (element) break;
         } catch (error) {
-            console.error("Debug (NameMC-Boost) >>> Error :", xpathExpressions[i], ":", error);
+            console.log("Debug (NameMC-Boost) >>> Error :", xpathExpressions[i], ":", error);
         }
     }
 
     if (!element) {
-        console.error("Debug (NameMC-Boost) >>> Nothing found with the xpath");
+        console.log("Debug (NameMC-Boost) >>> Nothing found with the xpath");
         return;
     }
 
@@ -109,10 +109,10 @@ async function fetchLabyBadges() {
 		});
 		}
         } else {
-            console.error('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
+            console.log('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
         }
     } catch (error) {
-        console.error('Debug (NameMC-Boost) >>> Badges not found error :', error);
+        console.log('Debug (NameMC-Boost) >>> Badges not found error :', error);
     }
 
     if (badgesFromLabyFound && badgesContainer.childNodes.length > 0) {
@@ -127,7 +127,7 @@ async function fetchJsonBadges() {
     let badgeNamesData = await fetchBadgeNames();
     var badgesContainer = document.getElementById('badges_list');
     if (!badgesContainer) {
-        console.error('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
+        console.log('Debug (NameMC-Boost) >>> Element with ID "badges_list" not found');
         return;
     }
 
