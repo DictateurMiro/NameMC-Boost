@@ -15,7 +15,7 @@ async function fetchBadgeNames() {
     try {
         const response = await fetch("https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/profile-information/badges/rank.json");
         const text = await response.text();
-        console.log("Debug (NameMC-Boost) >>> Raw JSON Data: ", text);
+        //console.log("Debug (NameMC-Boost) >>> Raw JSON Data: ", text);
         const badgeData = JSON.parse(text);
         return badgeData;
     } catch (error) {
@@ -104,7 +104,7 @@ async function fetchLabyBadges() {
 			const badgeElement = createBadgeElement(badge);
 			badgesContainer.appendChild(badgeElement);
 			if (badge !== data[data.length - 1]) {
-				badgesContainer.appendChild(document.createTextNode(', '));
+				badgesContainer.appendChild(document.createTextNode(' '));
 			}
 		});
 		}
@@ -116,7 +116,7 @@ async function fetchLabyBadges() {
     }
 
     if (badgesFromLabyFound && badgesContainer.childNodes.length > 0) {
-        badgesContainer.appendChild(document.createTextNode(', ')); // Add a comma and a space
+        badgesContainer.appendChild(document.createTextNode(' '));
     }
 }
 
@@ -144,12 +144,14 @@ async function fetchJsonBadges() {
             if (document.URL.includes(username)) {
                 badgesFromJsonFound = true;
                 var badgeElement = document.createElement('span');
-                if (badgeInfo.name === "OG Name") {
-                    badgeElement.innerHTML = badgeInfo.name + ' <img src="https://i.imgur.com/4z0YsnU.png" alt="OG Name" style="display: inline; margin-left: 5px;"/>';
+                
+                // Utilise icon_url pour afficher l'image et name pour le texte alternatif
+                if (badgeInfo.icon_url) {
+                    badgeElement.innerHTML = `<img src="${badgeInfo.icon_url}" alt="${badgeInfo.name}" style="display: inline; margin-right: 5px; vertical-align: middle;"/>`;
+                    badgeElement.title = badgeInfo.name + ': ' + badgeInfo.description; // Infobulle avec la description
                 } else {
                     badgeElement.textContent = badgeInfo.name;
                 }
-                badgeElement.title = badgeInfo.description;
                 badgeElement.style.cursor = 'help';
 
                 badgesJsonArray.push(badgeElement);
@@ -160,14 +162,28 @@ async function fetchJsonBadges() {
     for (let i = 0; i < badgesJsonArray.length; i++) {
         badgesContainer.appendChild(badgesJsonArray[i]);
         if (i !== badgesJsonArray.length - 1) {
-            badgesContainer.appendChild(document.createTextNode(', '));
+            badgesContainer.appendChild(document.createTextNode(' '));
         }
     }
 }
 
 const badgeImages = {
-    "OG Name": "../../assets/badges-icon/og_name.png",
-    "Mojang Staff": "../../assets/badges-icon/mojang_staff.png"
+    "OG Name": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/og_name.png",
+    "Mojang Staff": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/mojang_staff.png",
+	"Gift by Mojang": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/gift.png",
+	"Short name": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/short_name.png",
+	"Notch": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/notch.png",
+	"Classic Account": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/classic_account.png",
+	"Indev Account": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/indev_account.png",
+	"Infdev Account": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/infdev_account.png",
+	"Alpha Account": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/alpha_account.png",
+	"Beta Account": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/beta_account.png",
+	"Cape Collector": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/cape_collector.png",
+	"All Minecon capes": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/all_minecon_capes.png",
+	"Name Sniper": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/name_sniper.png",
+	"Invalid name": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/barrier.png",
+	"Invalid UUID": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/barrier.png",
+	"Duplicate Name": "https://raw.githubusercontent.com/DictateurMiro/NameMC-Boost/Chrome/assets/badges-icon/barrier.png"
 };
 
 function createBadgeElement(badge) {
@@ -182,6 +198,7 @@ function createBadgeElement(badge) {
         badgeElement.style.height = '32px';
         badgeElement.style.display = 'inline';
         badgeElement.style.marginRight = '5px';
+		badgeElement.style.cursor = 'help';
     } else {
         badgeElement = document.createElement('span');
         badgeElement.textContent = badge.name;
